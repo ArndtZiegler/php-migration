@@ -1,0 +1,12 @@
+<?
+<? echo "Test" ?>
+<?
+    echo "Test";
+?>
+    <?
+    <a href="https://example.com">example</a><?
+<?=$var;?>
+<?= $var; ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?PHP
+<?php

@@ -1,0 +1,10 @@
+# Standard cases
+while(list($key, $value) = each ( $attrs )) {
+while (list( $key, $val )=each($_POST))
+while(list($file,$info)=each($this->images))
+
+# Missing key
+while( list(, $line) = each($lines) ) {
+while( list(, $line ) = each( $lines ) ) {
+
+while (list(,$aro_group_id) = @each($aro_group_ids)) {

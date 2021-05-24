@@ -1,0 +1,1 @@
+$qid = mysql_query($sql, $db);

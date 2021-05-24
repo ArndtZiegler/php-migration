@@ -1,0 +1,16 @@
+# Patterns with special chars
+ereg("/[\r\n]/", $str, $m);
+eregi("/[\s[:space:]\n]*</td>[\s[:space:]\n]*<td>[\s[:space:]\n]*/", $text, $m);
+
+# With variable pattern, with whitespace
+ereg("/" . $_POST['pattern'] . "/", $_POST['string'], $m);
+eregi( "/" . $umlaute[$j][0] . "/", $filter[$i], $m);
+
+# Quote confusion
+ereg("/ '/", $sql, $m);
+
+# Flag confusion
+ereg( '#blub#ui', $in, $m);
+
+# Already preg
+ereg( "/blub/i" , $satz, $m );

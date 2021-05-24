@@ -1,0 +1,21 @@
+# Patterns with special chars
+$encoded = preg_replace("/[\r\n]/", '', $str);
+echo $row->ID."\t".$row->Autor_ID."\t".$row->Zeit."\t".$row->Klick-Counter."\t".$row->Name."\t".preg_replace("/\n/","[n]",$row->Beschreibung)."\n";
+$sql=preg_replace("/[\/\n\r\\]/"," ",$sql);
+$text=preg_replace("/[\s[:space:]\n]*</td>[\s[:space:]\n]*<td>[\s[:space:]\n]*/i","	",$text);
+
+# With variable pattern, with whitespace
+$out = preg_replace("/" . $_POST['pattern'] . "/",$_POST['replace'],$_POST['string']);
+$filter[$i]=preg_replace( "/" . $umlaute[$j][0] . "/i", $umlaute[$j][1], $filter[$i]);
+
+# Quote confusion
+$sql=preg_replace("/ '/","'",$sql);
+
+# Flag confusion
+$out = preg_replace( '#blub#ui', 'blabl', $in);
+
+# Already preg
+$test = preg_replace( "/blub/i" , "blab" , $satz );
+
+# Special case: comma substitution
+$money = preg_replace( '/,/', '.', $sum);

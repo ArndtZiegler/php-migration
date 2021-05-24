@@ -1,0 +1,2 @@
+$splitted = split(",", $data);
+$exploded = preg_split("# #", $user); // Existing delimiters are not replaced with new ones

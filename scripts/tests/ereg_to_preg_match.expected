@@ -1,0 +1,16 @@
+# Patterns with special chars
+preg_match("/[\r\n]/", $str, $m);
+preg_match("/[\s[:space:]\n]*</td>[\s[:space:]\n]*<td>[\s[:space:]\n]*/i", $text, $m);
+
+# With variable pattern, with whitespace
+preg_match("/" . $_POST['pattern'] . "/", $_POST['string'], $m);
+preg_match( "/" . $umlaute[$j][0] . "/i", $filter[$i], $m);
+
+# Quote confusion
+preg_match("/ '/", $sql, $m);
+
+# Flag confusion
+preg_match( '#blub#ui', $in, $m);
+
+# Already preg
+preg_match( "/blub/i" , $satz, $m );

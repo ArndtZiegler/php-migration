@@ -1,0 +1,21 @@
+# Patterns with special chars
+$encoded = ereg_replace("[\r\n]", '', $str);
+echo $row->ID."\t".$row->Autor_ID."\t".$row->Zeit."\t".$row->Klick-Counter."\t".$row->Name."\t".ereg_replace("\n","[n]",$row->Beschreibung)."\n";
+$sql=ereg_replace("[\/\n\r\\]"," ",$sql);
+$text=eregi_replace("[\s[:space:]\n]*</td>[\s[:space:]\n]*<td>[\s[:space:]\n]*","	",$text);
+
+# With variable pattern, with whitespace
+$out = ereg_replace($_POST['pattern'],$_POST['replace'],$_POST['string']);
+$filter[$i]=eregi_replace( $umlaute[$j][0], $umlaute[$j][1], $filter[$i]);
+
+# Quote confusion
+$sql=ereg_replace(" '","'",$sql);
+
+# Flag confusion
+$out = eregi_replace( '#blub#u', 'blabl', $in);
+
+# Already preg
+$test = preg_replace( "/blub/i" , "blab" , $satz );
+
+# Special case: comma substitution
+$money = ereg_replace( ',', '.', $sum);

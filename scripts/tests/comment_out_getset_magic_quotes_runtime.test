@@ -1,0 +1,6 @@
+get_magic_quotes_runtime();
+set_magic_quotes_runtime();
+    get_magic_quotes_runtime();
+    set_magic_quotes_runtime();
+$var = get_magic_quotes_runtime();
+get_magic_quotes_runtime($var);
