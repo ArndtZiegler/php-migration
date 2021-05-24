@@ -22,7 +22,7 @@ do
   totalTests=$((totalTests + 1))
 
   ## Setup involved files
-  truncatedScriptFile=${scriptToTest//src\//}
+  truncatedScriptFile=$(echo "$scriptToTest" | sed "s/.*src\///g")
   testFile="$testFilesDir${truncatedScriptFile//\.sh/.test}"
   tmpTestFile="$testFile"".tmp"
   expectedFile="${testFile//\.test/.expected}"
