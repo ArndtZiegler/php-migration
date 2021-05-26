@@ -17,10 +17,8 @@ for phpFile in "$@"; do
 	
 	## Remove double delimiters possibly introduced above
 	sed -i "s/preg_match(\(\s*\)\($QUOTES\)$DELIMITERS\($DELIMITERS\)\($REGEX_EXPR\)$DELIMITERS$DELIMITERS$QUOTES\(\s*\),/preg_match(\1\2\3\4\3\2\5,/g w /dev/stdout" "$phpFile"
-	#sed -i "s/preg_match(\s*\($QUOTES\)$DELIMITERS\($DELIMITERS\)\($REGEX_EXPR\)$DELIMITERS$DELIMITERS$QUOTES\(\s*\),/preg_match(\1\2\3\4\2\1,/g w /dev/stdout" "$phpFile"
 	## Move already existing flags after delimiters added by above
 	sed -i "s/preg_match(\(\s*\)\($QUOTES\)$DELIMITERS\($DELIMITERS\)\($REGEX_EXPR\)$DELIMITERS\($FLAGS*\)$DELIMITERS\($FLAGS*\)$QUOTES\(\s*\),/preg_match(\1\2\3\4\3\5\6\2\7,/g w /dev/stdout" "$phpFile"
-	#sed -i "s/preg_match(\s*\($QUOTES\)$DELIMITERS\($DELIMITERS\)\($REGEX_EXPR\)$DELIMITERS\($FLAGS*\)$DELIMITERS$QUOTES\s*,/preg_match(\1\2\3\2\4\1,/g w /dev/stdout" "$phpFile"
 done
 
 # TODO: siehe ereg_replace_to_preg_replace.sh
